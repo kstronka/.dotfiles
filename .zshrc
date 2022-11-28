@@ -115,6 +115,7 @@ alias ch="cd ~"
 alias cs="cd ~/src"
 alias ct="cd ~/tmp"
 alias cdoc="cd ~/Documents"
+alias cdot="cd ~/.dotfiles"
 # Git
 alias gn="git new"
 alias pushall="make black && make flake8 && gaa && gc && gp"
