@@ -73,6 +73,8 @@ plugins=(
     git
     zsh-autosuggestions
     zsh-interactive-cd
+    docker
+    docker-compose
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -120,8 +122,6 @@ alias cdot="cd ~/.dotfiles"
 alias gn="git new"
 alias pushall="make black && make flake8 && gaa && gc && gp"
 alias pruneall='git branch -vv | grep gone | awk "{ print $1 }" | xargs git branch -D'
-# Docker
-alias c="docker-compose"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
