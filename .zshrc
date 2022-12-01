@@ -109,6 +109,7 @@ bindkey '^ ' autosuggest-accept
 # Edit config
 alias edz="vim ~/.zshrc"
 alias rez="source ~/.zshrc"
+alias edt="vim ~/.tmux.conf"
 alias edv="vim ~/.vimrc"
 alias eda="vim ~/.aws/config"
 # Navigation
