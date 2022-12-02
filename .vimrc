@@ -10,5 +10,5 @@ nnoremap <C-k> 10k
 xnoremap <C-j> 10j
 xnoremap <C-k> 10k
 
-nnoremap <C-[> :set wrap!<ENTER>
-nnoremap <C-]> :set relativenumber!<ENTER>
+nnoremap <C-,> :set wrap!<ENTER>
+nnoremap <C-.> :set relativenumber!<ENTER>
