@@ -1,9 +1,15 @@
 syntax on
 colorscheme elflord
 
+filetype on
+
 set number
 set expandtab
 set tabstop=4
+
+" turn off expandtab for makefiles
+autocmd FileType make setlocal noet ci pi sts=0 sw=4 ts=4
+
 
 inoremap jj <ESC>
 inoremap kk <ESC>
