@@ -24,5 +24,5 @@ nnoremap <C-l> 5l
 xnoremap <C-h> 5h
 xnoremap <C-l> 5l
 
-nnoremap <C-,> :set wrap!<CR>
-nnoremap <C-.> :set rnu!<CR>
+nnoremap = :set wrap!<CR>
+nnoremap - :set rnu!<CR>
