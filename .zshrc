@@ -129,7 +129,7 @@ alias pruneall='git branch -vv | grep gone | awk "{ print $1 }" | xargs git bran
 alias awslocal="aws --endpoint-url=http://localhost:4566"
 # Misc
 alias watch="~/scripts/watch.sh"
-
+alias refreship="~/scripts/update_local_network.sh .env"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
