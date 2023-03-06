@@ -82,6 +82,8 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 bindkey '^ ' autosuggest-accept
 
+
+export PATH="~/scripts:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -123,7 +125,20 @@ alias cdot="cd ~/.dotfiles"
 alias gn="git new"
 alias pushall="make black && make flake8 && gaa && gc && gp"
 alias pruneall='git branch -vv | grep gone | awk "{ print $1 }" | xargs git branch -D'
+# AWS
+alias awslocal="aws --endpoint-url=http://localhost:4566"
+# Misc
+alias watch="~/scripts/watch.sh"
+
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Created by `pipx` on 2023-02-23 08:40:06
+export PATH="$PATH:/Users/krzysztof/.local/bin"
+
+# For pipx autocompletion
+autoload -U bashcompinit
+bashcompinit
+
