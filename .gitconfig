@@ -2,3 +2,6 @@
 [alias]
 	s = status -s
 	cam = commit -a -m
+[user]
+	name = Krzysztof Stronka
+	email = kstronka@apptension.com
