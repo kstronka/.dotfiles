@@ -80,7 +80,6 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 bindkey '^ ' autosuggest-accept
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 export PATH="~/scripts:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
