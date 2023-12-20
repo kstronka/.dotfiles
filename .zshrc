@@ -131,9 +131,13 @@ alias awslocal="aws --endpoint-url=http://localhost:4566"
 alias watch="~/scripts/watch.sh"
 alias refreship="~/scripts/update_local_network.sh .env"
 
+#### Path and other env vars ####
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Python
+export PATH="$(brew --prefix)/opt/python@3.11/libexec/bin:$PATH"
 
 # Created by `pipx` on 2023-02-23 08:40:06
 export PATH="$PATH:/Users/krzysztof/.local/bin"
