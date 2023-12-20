@@ -71,7 +71,6 @@ DISABLE_LS_COLORS="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     git
-    zsh-autosuggestions
     zsh-interactive-cd
     docker
     docker-compose
@@ -81,7 +80,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 bindkey '^ ' autosuggest-accept
-
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 export PATH="~/scripts:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
