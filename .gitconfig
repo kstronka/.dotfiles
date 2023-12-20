@@ -1,0 +1,4 @@
+
+[alias]
+	s = status -s
+	cam = commit -a -m
