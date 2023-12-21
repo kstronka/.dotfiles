@@ -78,9 +78,6 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
-bindkey '^ ' autosuggest-accept
-
 export PATH="~/scripts:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -128,6 +125,7 @@ alias awslocal="aws --endpoint-url=http://localhost:4566"
 # Misc
 alias watch="~/scripts/watch.sh"
 alias refreship="~/scripts/update_local_network.sh .env"
+alias docker-compose="docker compose"
 
 #### Path and other env vars ####
 export NVM_DIR="$HOME/.nvm"
@@ -144,3 +142,5 @@ export PATH="$PATH:/Users/krzysztof/.local/bin"
 autoload -U bashcompinit
 bashcompinit
 
+# Autocompletion; requires fzf and zsh-autosuggestions to be installed
+source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
