@@ -119,12 +119,11 @@ alias cdot="cd ~/.dotfiles"
 # Git
 alias gn="git new"
 alias pushall="make black && make flake8 && gaa && gc && gp"
-alias pruneall='git branch -vv | grep gone | awk "{ print $1 }" | xargs git branch -D'
+alias pruneall="git branch -vv | grep gone | awk '{ print $1 }' | xargs git branch -D"
+alias gfc="~/.dotfiles/scripts/git_find_checkout.sh"
 # AWS
 alias awslocal="aws --endpoint-url=http://localhost:4566"
 # Misc
-alias watch="~/scripts/watch.sh"
-alias refreship="~/scripts/update_local_network.sh .env"
 alias docker-compose="docker compose"
 
 #### Path and other env vars ####
@@ -144,3 +143,7 @@ bashcompinit
 
 # Autocompletion; requires fzf and zsh-autosuggestions to be installed
 source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
