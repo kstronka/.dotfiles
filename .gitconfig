@@ -6,3 +6,5 @@
 [user]
 	name = Krzysztof Stronka
 	email = kstronka@apptension.com
+[core]
+	pager = less -F -X

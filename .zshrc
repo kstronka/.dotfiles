@@ -120,7 +120,7 @@ alias cdot="cd ~/.dotfiles"
 alias gn="git new"
 alias pushall="make black && make flake8 && gaa && gc && gp"
 alias pruneall="git branch -vv | grep gone | awk '{ print $1 }' | xargs git branch -D"
-alias gfc="~/.dotfiles/scripts/git_find_checkout.sh"
+alias gf="~/.dotfiles/scripts/git_find_checkout.sh"
 # AWS
 alias awslocal="aws --endpoint-url=http://localhost:4566"
 # Misc
