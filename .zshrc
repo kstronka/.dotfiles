@@ -103,6 +103,8 @@ export PATH="~/scripts:$PATH"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+export EDITOR='vim'
+
 # Edit config
 alias edz="vim ~/.zshrc"
 alias rez="source ~/.zshrc"
@@ -110,7 +112,7 @@ alias edt="vim ~/.tmux.conf"
 alias edv="vim ~/.vimrc"
 alias eda="vim ~/.aws/config"
 # Navigation
-alias ll="ls -la"
+alias ll="ls -lAh --color"
 alias ch="cd ~"
 alias cs="cd ~/src"
 alias ct="cd ~/tmp"
@@ -121,10 +123,23 @@ alias gn="git new"
 alias pushall="make black && make flake8 && gaa && gc && gp"
 alias pruneall="git branch -vv | grep gone | awk '{ print $1 }' | xargs git branch -D"
 alias gf="~/.dotfiles/scripts/git_find_checkout.sh"
+alias gcf='git checkout $(git branch -a | tr -d '\'' *'\'' | grep -v '\''^remotes/origin/'\'' | fzf --preview '\''git log --color master..{} --oneline'\'' --preview-window '\''down'\'')'
+alias fcommit="fzf --header 'Select a commit' --preview 'echo {} | cut -f1 -d\" \" | xargs git show --compact-summary' --reverse --preview-window=down"
+# GH
+alias fpr="sed 's/\w{2,}/\t/' | column -s $'\t' -t | fzf --header 'Select a PR' --preview 'echo {} | cut -f1 -d'\'' '\'' | xargs gh pr view' --reverse --preview-window=down"
+alias lpr="gh pr list | sed 's/\w{2,}/\t/' | column -t -s $'\t' | fpr"
+
+# Scripts
+alias watch="~/scripts/watch.sh"
 # AWS
 alias awslocal="aws --endpoint-url=http://localhost:4566"
 # Misc
 alias docker-compose="docker compose"
+alias flog='docker compose ps | fzf -m --header '\''Select container'\'' --preview '\''docker container logs $(echo {} | cut -d" " -f1)'\'' --reverse --preview-window=down,follow | cut -d" " -f1 | xargs docker container logs -f'
+alias fcont='docker container ls | fzf -m --header '\''Select container'\'' --preview '\''docker container logs $(echo {} | cut -d" " -f1)'\'' --reverse --preview-window=down,follow | awk '\''{print $1}'\'''
+
+alias fman='compgen -c | fzf -m --header '\''Select command'\'' --preview '\''man {}'\'' --reverse --preview-window=down | xargs man'
+
 
 #### Path and other env vars ####
 export NVM_DIR="$HOME/.nvm"
