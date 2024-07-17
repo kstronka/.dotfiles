@@ -32,7 +32,7 @@ nnoremap SS :w<cr>
 nnoremap <space> :
 
 " Tab navigation
-nnoremap <C-t><C-t> :tabn<CR>
+nnoremap <C-t><C-t> :tabnew<CR>
 nnoremap <C-t><C-e> :tabe<space>
 nnoremap <C-t><C-k> :tabc<CR>
 nnoremap <C-t><C-[> :tabp<CR>
