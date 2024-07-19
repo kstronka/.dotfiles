@@ -58,6 +58,8 @@ nnoremap <C-l><C-k> :cclose<CR>
 nnoremap <C-l><C-[> :cp<CR>
 nnoremap <C-l><C-]> :cn<CR>
 
+" TODO: implement jumping between occurrences of a given string within a buffer
+
 " Autocompletion
 set completeopt=noselect,menu
 
